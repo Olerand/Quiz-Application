@@ -1,14 +1,18 @@
-import Menu from './components/Menu'
-import Main from './components/Main'
+import { Routes, Route } from 'react-router-dom'
+import Layout from './components/Layout'
+import Dashboard from './components/Dashboard'
+import Achievments from './components/Achievments'
+import History from './components/History'
 
 const App = () => {
-
-
   return (
-    <div className="flex flex-row bg-[#FBF9F9] w-[100vw] h-[100vh]">
-      <Menu/>
-      <Main/>
-    </div>
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route index element={<Dashboard />} />
+        <Route path="achievments" element={<Achievments />} />
+        <Route path="history" element={<History />} />
+      </Route>
+    </Routes>
   )
 }
 
