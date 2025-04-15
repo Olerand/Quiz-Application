@@ -1,5 +1,7 @@
 @import "tailwindcss";
-
+:root{
+  --BLUE : #1935CA
+}
 
 @font-face {
     font-family: 'Poppins';
@@ -21,3 +23,7 @@
     font-style: normal;
   }
   
+
+*{
+  box-sizing: border-box;
+}

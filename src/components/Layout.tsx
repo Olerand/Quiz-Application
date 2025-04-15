@@ -4,11 +4,9 @@ import Menu from './Menu'
 
 const Layout = () => {
   return (
-    <div className="flex">
+    <div className="flex pl-[31px] pt-[33px] pr-[31px] h-[100vh] bg-[#FBF9F9]">
       <Menu />
-      <div className="flex-1 w-[83.7%]">
-        <Outlet />
-      </div>
+      <Outlet />
     </div>
   )
 }

@@ -56,7 +56,7 @@ const Menu = () => {
     navigate(url)
   }
   return (
-    <div className="font-poppins   pt-[43px] pl-[31px] w-[16.3%] h-[100vh] flex flex-col ">
+    <div className="font-poppins  w-[16.3%]  flex flex-col ">
       <div className="mb-[50px] w-[238px] h-[42px] flex flex-row">
         <img className='w-[42px] h-[42px]' src={logo} alt="" />
         <h1 className='text-center w-[188px] h-[40px] text-[#1935CA] text-[26.86px]  align-middle font-bold '>Quiz App</h1>

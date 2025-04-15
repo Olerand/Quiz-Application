@@ -1,14 +1,16 @@
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
 import { useDispatch, useSelector,TypedUseSelectorHook } from "react-redux";
+import quizReducer from './reducers/quiz'
+
 
 const rootReducer = combineReducers(
     {
-        
+        quiz:quizReducer
     }
 )
 
 
-const setupStore = () =>{
+export const setupStore = () =>{
     return configureStore({
         reducer:rootReducer
     })
