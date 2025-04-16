@@ -1,14 +1,14 @@
 import { Quiz } from "./reducers/quiz";
 
-
 export const initialState: Quiz[] = [
     {
       name: "Основы JavaScript",
       description: "Проверь базовые знания по JavaScript.",
       imgUrl: "https://avatars.mds.yandex.net/i?id=0bf5c655682bbe14a236ac2754bac954a9b1f901-5538185-images-thumbs&n=13",
       date: "2025-04-15",
-      points: 0,
+      points: 100,
       done: false,
+      text: "JavaScript - это язык программирования, который позволяет вам создавать динамически обновляемый контент на веб-страницах. Он является одной из основных технологий веба наряду с HTML и CSS. Этот тест проверит ваши базовые знания по JavaScript, включая типы данных, методы массивов, объявление переменных и замыкания.",
       questions: [
         {
           title: "Что выведет typeof NaN?",
@@ -52,8 +52,9 @@ export const initialState: Quiz[] = [
       description: "Проверь знания верстки.",
       imgUrl: "https://i.ytimg.com/vi/48FS3Zq1Esg/maxresdefault.jpg",
       date: "2025-04-12",
-      points: 0,
+      points: 100,
       done: false,
+      text: "HTML и CSS - это основные технологии для создания веб-страниц. HTML (HyperText Markup Language) определяет структуру и содержание страницы, а CSS (Cascading Style Sheets) отвечает за её внешний вид и оформление. Этот тест проверит ваши знания основных HTML-тегов, CSS-свойств и принципов вёрстки.",
       questions: [
         {
           title: "Какой тег для заголовка 1 уровня?",
@@ -87,8 +88,9 @@ export const initialState: Quiz[] = [
       description: "Основы систем контроля версий.",
       imgUrl: "https://i.ytimg.com/vi/Z_YgTWe3JIs/maxresdefault.jpg",
       date: "2025-04-10",
-      points: 0,
+      points: 100,
       done: false,
+      text: "Git - это распределённая система контроля версий, которая позволяет отслеживать изменения в исходном коде и координировать работу нескольких разработчиков. GitHub - это платформа для хостинга проектов с использованием Git. Этот тест проверит ваши знания основных команд Git и принципов работы с репозиториями.",
       questions: [
         {
           title: "Как инициализировать репозиторий?",
@@ -127,8 +129,9 @@ export const initialState: Quiz[] = [
       description: "Базовые вопросы по React.js",
       imgUrl: "https://i.pinimg.com/originals/b3/8e/e8/b38ee84e7d6fdbe2d91604462df9fc43.jpg",
       date: "2025-04-11",
-      points: 0,
+      points: 100,
       done: false,
+      text: "React - это популярная JavaScript-библиотека для создания пользовательских интерфейсов. Она позволяет создавать компонентные UI и эффективно обновлять DOM при изменении данных. Этот тест проверит ваши знания основных концепций React, включая JSX, хуки, пропсы и жизненный цикл компонентов.",
       questions: [
         {
           title: "Что такое JSX?",
@@ -167,8 +170,9 @@ export const initialState: Quiz[] = [
       description: "Начальный уровень по TypeScript.",
       imgUrl: "https://avatars.mds.yandex.net/i?id=a356feb51f71ce18c3489ddba62db095_l-5485758-images-thumbs&n=13",
       date: "2025-04-09",
-      points: 0,
+      points: 100,
       done: false,
+      text: "TypeScript - это строго типизированный язык программирования, который расширяет возможности JavaScript, добавляя статическую типизацию. Он помогает выявлять ошибки на этапе разработки и улучшает поддержку кода. Этот тест проверит ваши базовые знания TypeScript, включая типы, интерфейсы и операторы.",
       questions: [
         {
           title: "Как объявить переменную с типом string?",
@@ -203,4 +207,3 @@ export const initialState: Quiz[] = [
       ]
     }
   ];
-  

@@ -17,6 +17,7 @@ export interface Quiz {
     date:string,
     points:number
     done:boolean,
+    text:string
     questions:Question[]
 
 
@@ -29,7 +30,9 @@ const quizSlice = createSlice({
   name: "quiz",
   initialState,
   reducers: {
-    
+    setDoneQuiz(state,action){
+      
+    }
   },
 });
 
