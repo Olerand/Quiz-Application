@@ -48,7 +48,7 @@ const quizSlice = createSlice({
       );
     },
     setUserAnswer(state, action) {
-      const { quizName, questionIndex, userAnswer } = action.payload;
+      const { questionIndex, userAnswer } = action.payload;
       state.map(quiz=>{
         quiz.questions = quiz.questions.map((q, i) =>
           i === questionIndex ? { ...q, userAnswer } : q

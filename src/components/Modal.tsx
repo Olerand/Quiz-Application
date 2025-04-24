@@ -9,7 +9,7 @@ interface ModalProps{
 }
 
 
-const Modal:FC<ModalProps> = ({children,modal,setModal}) => {
+const Modal:FC<ModalProps> = ({children,setModal}) => {
 
   return (
     <div className='h-[100vh] w-[100vw] bg-black/50 fixed top-0 left-0 flex justify-center items-center'>

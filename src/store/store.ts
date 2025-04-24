@@ -1,20 +1,20 @@
 import { combineReducers, configureStore, Middleware } from "@reduxjs/toolkit";
 import { useDispatch, useSelector, TypedUseSelectorHook } from "react-redux";
 import quizReducer from './reducers/quiz';
-import loggerMiddleware from "./middleware";
+
 
 const rootReducer = combineReducers({
   quiz: quizReducer,
 });
 
-// Middleware для сохранения в localStorage
+
 const localStorageMiddleware: Middleware = store => next => action => {
   const result = next(action);
   localStorage.setItem('quizState', JSON.stringify(store.getState().quiz));
   return result;
 };
 
-// Функция для получения начального состояния
+
 const getInitialState = () => {
   const storedState = localStorage.getItem('quizState');
   return storedState ? JSON.parse(storedState) : undefined;
