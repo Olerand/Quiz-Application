@@ -1,16 +1,12 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useLocation } from "react-router-dom";
 import Modal from "./Modal";
 import Questions from "./Questions";
-
+import Button from "./Button";
 
 const QuizPage = () => {
     const { state } = useLocation();
     const [modal,setModal] = useState<boolean>(false)
-
-    useEffect(()=>{
-        console.log(state)
-    },[state])
     return (
     <div className="font-poppins  p-[22px] pt-0 w-[100%] h-[100%] flex flex-col bg-[#FBF9F9]">
         <h1 className="text-[#C4C4C4] font-[20px] mb-[34px]  ">Dashboard / {state.name}</h1>
@@ -36,13 +32,15 @@ const QuizPage = () => {
                         <span className="text-[#696F79] text-[20px]">Done:</span>
                         <span className="absolute left-[166px] text-[#696F79] text-[20px]">{state.done ? 'Выполнено' : ' Не выполнено'}</span>
                     </h1>
-                    <button onClick={()=>setModal(true)} className="w-[212px] h-[64px] bg-[var(--BLUE)] rounded-[10px] text-white  hover:bg-white hover:text-[#1935CA] 
-          hover:border-[1px] hover:border-black transition-colors duration-300 active:shadow-2xl shadow-inner">Начать тест</button>
+                    <Button onClick={()=>setModal(true)} w={'212px'} h={'64px'} blue={true}>
+                        Start Quiz
+                    </Button>
+                    
                 </div>
                 {
                     modal ? 
                     <Modal modal={modal} setModal = {setModal}>
-                        <Questions state={state} setModal = {setModal} />
+                        <Questions state={state}  />
                     </Modal> 
                     : null
                 }
